@@ -1,29 +1,29 @@
 {
   "name": "confusion",
-  "version": "2.0.0",
-  "description": "This is a website for Ristorante Con Fusion",
+  "version": "1.0.0",
+  "description": "Introduction to Ristorante con Fusion",
   "main": "aboutus.html",
   "scripts": {
     "start": "npm run lite",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lite": "lite-server"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Suvigya124/Bootstrap4.git"
+  },
   "author": "Suvigya Agrawal",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Suvigya124/Bootstrap4/issues"
+  },
+  "homepage": "https://github.com/Suvigya124/Bootstrap4#readme",
   "devDependencies": {
-    "lite-server": "^2.3.0"
+    "lite-server": "^2.6.1"
   },
   "dependencies": {
     "bootstrap": "^4.0.0",
     "jquery": "^3.3.1",
     "popper.js": "^1.12.9"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Suvigya124/Bootstrap4.git"
-  },
-  "bugs": {
-    "url": "https://github.com/Suvigya124/Bootstrap4/issues"
-  },
-  "homepage": "https://github.com/Suvigya124/Bootstrap4#readme"
+  }
 }
