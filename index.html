@@ -30,7 +30,7 @@
                 <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
             </ul>
             <span class="navbar-text">
-                <a data-toggle="modal" data-target="#loginModal">
+                <a id="loginButton">
                     <span class="fa fa-sign-in"></span> Login
                 </a>
             </span>
@@ -40,14 +40,14 @@
 
     <div id="loginModal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="content">
-            <div class="modal-content">
-                <div class="modal-header">
+            <div class="modal-content" style="border:0px;">
+                <div class="modal-header navbar-dark" style="color:white; border:0px;">
                     <h4 class="modal-title">Login</h4>
-                    <button type="button" class="close" data-dismiss="modal">
+                    <button type="button" class="close" data-dismiss="modal" style="color:floralwhite;">
                         &times;
                     </button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body" style="background-color:#D1C4E9;">
                     <form>
                         <div class="form-row">
                             <div class="form-group col-sm-4">
@@ -86,7 +86,7 @@
                     <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm-3 align-self-center">
-                    <a class="btn btn-warning" data-toggle="modal" data-html="true" data-target="#tableModal" role="button">Reserve Table</a>
+                    <a class="btn btn-warning" id="reserveButton" data-html="true" role="button">Reserve Table</a>
                 </div>
             </div>
         </div>
@@ -94,14 +94,14 @@
 
     <div id="tableModal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="content">
-            <div class="modal-content">
-                <div class="modal-header">
+            <div class="modal-content" style="border:0px;">
+                <div class="modal-header navbar-dark" style="color:white; border:0px;">
                     <h4 class="modal-title">Reserve a Table</h4>
-                    <button type="button" class="close" data-dismiss="modal">
+                    <button type="button" class="close" data-dismiss="modal" style="color:floralwhite;">
                         &times;
                     </button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body" style="background-color:#D1C4E9;">
                     <form>
                         <div class="form-group row">
                             <label for="noofguest" class="col-md-2 col-form-label">Number of Guests</label>
@@ -304,6 +304,12 @@
                     $('#carouselButton').children('span').removeClass('fa-play');
                     $('#carouselButton').children('span').addClass('fa-pause');
                 }
+            });
+            $("#loginButton").click(function() {
+                $("#loginModal").modal("show");
+            });
+            $("#reserveButton").click(function() {
+                $("#tableModal").modal("show");
             });
         })
     </script>
