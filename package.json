@@ -4,10 +4,12 @@
   "description": "Introduction to Ristorante con Fusion",
   "main": "aboutus.html",
   "scripts": {
-    "start": "npm run lite",
+    "start": "npm run watch:all",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lite": "lite-server",
-    "scss": "node-sass -o css/ css/"
+    "scss": "node-sass -o css/ css/",
+    "watch:scss": "onchange \"css/*.scss\" -- npm run scss",
+    "watch:all": "parallelshell \"npm run watch:scss\" \"npm run lite\" "
   },
   "repository": {
     "type": "git",
@@ -21,7 +23,9 @@
   "homepage": "https://github.com/Suvigya124/Bootstrap4#readme",
   "devDependencies": {
     "lite-server": "^2.6.1",
-    "node-sass": "^3.10.1"
+    "node-sass": "^6.0.1",
+    "onchange": "^7.1.0",
+    "parallelshell": "^3.0.1"
   },
   "dependencies": {
     "bootstrap": "^4.0.0",
